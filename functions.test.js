@@ -11,3 +11,14 @@ test('Shouldnt return 5 when given 2 + 2', () => {
 it('Should be null', () => {
     expect(functions.isNull()).toBeNull();
 });
+
+it('Should be falsy', () => {
+    expect(functions.checkValue(undefined)).toBeFalsy();
+});
+
+test('User should be Ronald Regan', () => {
+    expect(functions.createUser()).toEqual({
+        firstName: 'Ronald',
+        lastName: 'Regan'
+    })
+})
